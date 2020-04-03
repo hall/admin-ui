@@ -24,7 +24,10 @@ import { LMarkdownEditorModule } from 'ngx-markdown-editor';
 import { UserComponent } from './user/user/user.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { EnvironmentsComponent } from './configuration/environments/environments.component';
+import { AccessCodesComponent } from './configuration/accesscodes/accesscodes.component';
 import { EditEnvironmentComponent } from './configuration/environments/edit-environment/edit-environment.component';
+import { EditAccessCodeComponent } from './configuration/accesscodes/edit-accesscode/edit-accesscode.component';
+import { Util } from './data/util.service';
 
 export function jwtOptionsFactory() {
   return {
@@ -54,7 +57,9 @@ export function jwtOptionsFactory() {
     UserComponent,
     ConfigurationComponent,
     EnvironmentsComponent,
-    EditEnvironmentComponent
+    EditEnvironmentComponent,
+    AccessCodesComponent,
+    EditAccessCodeComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +81,8 @@ export function jwtOptionsFactory() {
     BrowserAnimationsModule
   ],
   providers: [
-    ScenarioService
+    ScenarioService,
+    Util
   ],
   bootstrap: [RootComponent],
   schemas: [

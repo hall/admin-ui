@@ -8,6 +8,7 @@ import { ScenarioComponent } from './scenario/scenario.component';
 import { UserComponent } from './user/user/user.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { EnvironmentsComponent } from './configuration/environments/environments.component';
+import { AccessCodesComponent } from './configuration/accesscodes/accesscodes.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -50,6 +51,10 @@ const routes: Routes = [
       {
         path: 'environments',
         component: EnvironmentsComponent
+      },
+      {
+        path: 'accesscodes',
+        component: AccessCodesComponent
       }
     ]
   }
